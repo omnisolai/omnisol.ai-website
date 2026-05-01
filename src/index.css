@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+
+
+
+/* 🎨 Tailwind Theme Tokens (Design System) */
+@theme {
+  /* ✅ Custom Fonts */
+  --font-main: "Gilroy", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-libresans: "Libre Sans", sans-serif;
+  --font-Roboto: "Roboto", sans-serif;
+
+
+  /* ✅ Custom Colors */
+  --color-orange: #FD741D;
+  --color-orange-100: #A72201;
+  --color-hero: #A12400;
+  --color-bgDark: #410001;
+  --color-line: #FCDCB9;
+  --color-iconColor: #1E1E1E;
+  --color-footerBg: #F5F6FD;
+  --color-border: #FFE3D9;
+  --color-textColor: #050101;
+  --color-badgeBorder: #6D2D05;
+  --color-badgeBg: #FFF7F0;
+  --color-badgeText: #6D2D05;
+  --color-ReadmoreText: #CD6114;
+  --color-NavLinks: #C8420C;
+  --color-NavNewLinkBg: #80FF97;
+  --color-NavNewText: #003209;
+  --color-heroCardBg: #B158373D;
+  --color-cardBgOne: #FCFFE5;
+  --color-cardBorderOne: #59557257;
+  --color-cardBgTwo: #E8E5FF;
+  --color-cardBgThree: #FFFBEA;
+  --color-cardBgFour: #E5FFFC;
+  --color-cardBgFive: #EBFFE5;
+  --color-cardBgSix: #FFE5F6;
+  --color-cardBgSeven: #E1E0EF;
+  --color-cardBgEight: #E5EEFF;
+  --color-cardBgNine: #FFE5E5;
+  --color-cardBorder: #DCE4E8;
+  --color-weBuildBg: #140500;
+  --color-weBuildText: #FFD2B5;
+  --color-AiCardBg: #F5F5F5;
+  --color-AiCardText: #191919;
+  --color-rounedCardBg: #B21A1A;
+  --color-arrowBorder: #DEDEDE;
+  --color-faqText: #404040;
+
+
+
+
+
+
+
+
+  --color-formbg: #F4F4F4;
+  --color-formtext: #263540;
+  --color-foamborder: #BFCFE3;
+  --color-foamtext: #B4C2D5;
+  --color-white: #FFFFFF;
+  --color-uploadborder: #DDDDDD;
+  --color-uploadbg: #FBFAFA;
+  --color-inputborder: #007DBA;
+  --color-lightbg: #FCFCFD;
+  --color-bgborder: #D4D4D4;
+  --color-bgmedium: #F9F9F9;
+  --color-darktext: #001833;
+  --color-bodrerbottom: #1B1B1B;
+  --color-lightborder: #DCE4E8;
+  --color-inputbg: #FEF9F0;
+  --color-orangetext: #B93307;
+
+
+
+
+
+
+
+  --color-gray: #F5F5F5;
+  --color-orange-400: #FFF7F0;
+
+  --color-orange-dark: #6D2D05;
+
+  --color-text-dark: #1e293b;
+  --color-accent: #38bdf8;
+
+  --color-para: #191919;
+  --color-testimonial: #f1faff;
+  --color-testimonial-border: #80BCF9;
+
+  --color-star: #EA5732;
+
+  --color-faq: #D1C0E7;
+
+  --color-header-sub: #FFF0E8;
+  --color-header-sub-color: #832E01;
+
+  --color-header-box: #F3C8B1;
+  --color-header-box-border: #AD532D;
+
+  --color-engage: #FFD7D7;
+  --color-who-border: #dce4e8;
+
+  --color-glass-bg: #9FE0FF;
+
+
+  /* ✅ Custom Spacing / Radius */
+  --radius-main: 1rem;
+  --section-padding: 4rem;
+}
+
+/* 💾 Load all Gilroy font weights under one family */
+@font-face {
+  font-family: "Gilroy";
+  src: url("/Font/Gilroy-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/Font/Gilroy-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/Font/Gilroy-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/Font/Gilroy-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/Font/Gilroy-Heavy.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+.faqs .slick-track {
+  display: flex;
+  gap: 10px;
+}
+
+/* .vertical-slider .slick-slide {
+    opacity: 0.6;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+  }
+  
+  .vertical-slider .slick-slide.slick-center {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .vertical-slider .slick-list {
+    height: 100%;
+  }
+  
+  .vertical-slider .slick-track {
+    display: flex !important;
+    flex-direction: column;
+    height: 100%;
+  } */
+
+
+/* Waves bg css */
+.waves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.waves::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  transform: translate3d(calc(var(--x, -100px) - 50%), calc(var(--y, -100px) - 50%), 0);
+  will-change: transform;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.3);
+}
+
+.waves-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(50px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-10px);
+  }
+
+  70% {
+    transform: scale(0.9) translateY(0px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+  }
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
